@@ -1,0 +1,129 @@
+
+
+
+#embed("common/theHead")
+
+<!-- Pagination -->
+
+
+<nav aria-label="Page navigation example ">
+  <ul class="pagination justify-content-center">
+    <li class="page-item">
+      <a class="page-link text-dark" href="/house/locationOnParameter" tabindex="-1">Previous</a>
+    </li>
+    <li class="page-item disabled"><a class="page-link" href="#">1</a></li>
+    <li class="page-item disabled"><a class="page-link" href="#">2</a></li>
+    <li class="page-item disabled"><a class="page-link" href="#">3</a></li>
+    <li class="page-item disabled"><a class="page-link" href="#">4</a></li>
+    <li class="page-item disabled"><a class="page-link text-light bg-dark border-dark" href="#">5</a></li>
+    <li class="page-item disabled"><a class="page-link" href="#">6</a></li>
+
+  </ul>
+</nav>
+
+
+<!-- content -->
+<div class="d-block d-sm-none">
+  <br>
+</div>
+
+
+<div class="jumbotron">
+  <center>
+  <h3 class="display-4">sides to protect</h3>
+
+  <hr class="my-4">
+
+
+
+
+  <p class="lead">Please enter the which sides to protect.</p>
+
+
+
+
+
+  <form class="" action="/house/offer" method="get">
+    <div class="col-4">
+      <div class="col btn-group btn-group-toggle" data-toggle="buttons" style="border-radius: 0px;">
+          <div class="row btn-group">
+            <label class="btn btn-secondary btn-lg" style="border-bottom-left-radius: 0px; border-top-left-radius: 20px;">
+              <input type="radio" name="locationOnParameter" value="1" id="loconParameterButton1" disabled>
+              <h1><span id="loconParameterLabel1" class="oi oi-grid-four-up"></span></h1>
+            </label>
+            <label class="btn btn-secondary btn-lg">
+              <input type="radio" name="locationOnParameter" value="2" id="loconParameterButton2" disabled>
+              <h1><span id="loconParameterLabel2" class="oi oi-grid-four-up"></span></h1>
+            </label>
+            <label class="btn btn-secondary btn-lg" style="border-bottom-left-radius: 20px;">
+              <input type="radio" name="locationOnParameter" value="3" id="loconParameterButton3" disabled>
+              <h1><span id="loconParameterLabel3" class="oi oi-grid-four-up"></span></h1>
+            </label>
+          </div>
+
+          <div class="row btn-group">
+            <label class="btn btn-secondary btn-lg">
+              <input type="radio" name="locationOnParameter" value="4" id="loconParameterButton4" disabled>
+              <h1><span id="loconParameterLabel4" class="oi oi-grid-four-up"></span></h1>
+            </label>
+            <label class="btn btn-secondary btn-lg">
+              <input type="radio" name="locationOnParameter" value="5" id="loconParameterButton5" disabled>
+              <h1><span id="loconParameterLabel5" class="oi oi-grid-four-up"></span></h1>
+            </label>
+            <label class="btn btn-secondary btn-lg">
+              <input type="radio" name="locationOnParameter" value="6" id="loconParameterButton6" disabled>
+              <h1><span id="loconParameterLabel6" class="oi oi-grid-four-up"></span></h1>
+            </label>
+          </div>
+          <br>
+          <div class="row btn-group">
+            <label class="btn btn-secondary btn-lg" style="border-top-right-radius: 20px;">
+              <input type="radio" name="locationOnParameter" value="7" id="loconParameterButton7" disabled>
+              <h1><span id="loconParameterLabel7" class="oi oi-grid-four-up"></span></h1>
+            </label>
+            <label class="btn btn-secondary btn-lg">
+              <input type="radio" name="locationOnParameter" value="8" id="loconParameterButton8" disabled>
+              <h1><span id="loconParameterLabel8" class="oi oi-grid-four-up"></span></h1>
+            </label>
+            <label class="btn btn-secondary btn-lg" style="border-top-right-radius: 0px; border-bottom-right-radius: 20px;">
+              <input type="radio" name="locationOnParameter" value="9" id="loconParameterButton9" disabled>
+              <h1><span id="loconParameterLabel9" class="oi oi-grid-four-up"></span></h1>
+            </label>
+          </div>
+      </div>
+    </div>
+
+    <br>
+
+
+
+    <button class="btn btn-outline-dark btn-lg float-center" type="submit" name="button">Continue</button>
+  </form>
+  </center>
+</div>
+<br>
+
+<script type="text/javascript">
+$("#loconParameterButton#(locationOnParameter)").prop("checked", true);
+$("#loconParameterLabel#(locationOnParameter)").prop('class', 'oi oi-home');
+
+
+
+$("input[type='radio']").click(function(){
+  var radioValue = $("input[name='locationOnParameter']:checked").val();
+  $("input[type='radio']").each(function(){
+    var num = $(this).val();
+    //alert("#loconParameterButton" + num);
+    $("#loconParameterLabel" + num).prop('class', 'oi oi-grid-four-up');
+  })
+  if(radioValue){
+    //alert("#loconParameterButton" + radioValue);
+    $("#loconParameterLabel" + radioValue).prop('class', 'oi oi-home');
+  }
+});
+</script>
+
+
+
+
+#embed("common/theFooter")

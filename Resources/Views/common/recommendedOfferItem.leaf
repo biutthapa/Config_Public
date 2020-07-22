@@ -1,0 +1,91 @@
+<div class="row">
+  <div class="col-sm-3 float-center">
+    <img id="#(r_packageType)_#(r_toggleImageId)" class="img-fluid" style="padding: 0px;" src="#(r_blackImageURL)">
+  </div>
+  <div class="col-sm-6">
+    <h5>#(r_itemTitle)</h5>
+    <small class="col text-muted float-right">#(r_itemDescription)</small>
+  </div>
+
+  <div class="col-sm-3 justify-content-center align-self-center">
+    <small>Quantity</small>
+    <br>
+    <small class="row btn-group" role="group">
+      <input type="number" id="#(r_quantityInputName)_#(r_packageType)" name="#(r_quantityInputName)" min="1" oninput="validity.valid||(value='');" step="1" value="#(r_itemQuantity)"/>
+    </small>
+    <div class="row justify-content-center align-self-center" id="#(r_priceId)_#(r_packageType)">
+      <p>#(r_price * r_itemQuantity)</p>
+    </div>
+  </div>
+</div>
+
+
+
+
+<script>
+
+
+// document.getElementById("#(r_packageType)_#(r_toggleImageId)").onload = function() { colorCheck_#(r_packageType)_#(r_itemId)() };
+
+
+function updateObject_#(r_priceId)_#(r_packageType)() {
+  var quantity = $("##(r_quantityInputName)_#(r_packageType)").val()
+  object_#(r_priceId)_#(r_packageType).price = quantity * #(r_price)
+  updateTotal_recommended()
+}
+
+
+
+$("##(r_quantityInputName)_#(r_packageType)").ready(function() {
+  let price = #(r_itemQuantity) * #(r_price)
+  $("##(r_priceId)_#(r_packageType)").text('€' + price.toFixed(2));
+  updateObject_#(r_priceId)_#(r_packageType)()
+});
+
+$("##(r_quantityInputName)_#(r_packageType)").change(priceUpdate_#(r_priceId)_#(r_packageType))
+
+$("##(r_quantityInputName)_#(r_packageType)").parent().on("click", "#priceChangeBtn", function(){
+  var quantity = $("##(r_quantityInputName)_#(r_packageType)").val()
+  let price = quantity * #(r_price)
+  $("##(r_priceId)_#(r_packageType)").text('€' + price.toFixed(2));
+  updateObject_#(r_priceId)_#(r_packageType)()
+  });
+
+function priceUpdate_#(r_priceId)_#(r_packageType)() {
+  var quantity = $(this).val()
+  let price = quantity * #(r_price)
+  $("##(r_priceId)_#(r_packageType)").text('€' + price.toFixed(2));
+  updateObject_#(r_priceId)_#(r_packageType)()
+}
+
+
+
+
+function colorCheck_#(r_packageType)_#(r_itemId)() {
+  console.log("a")
+  // Get the checkbox
+  var checkBox = document.getElementById("recommendedColorToggle");
+  // Get the output text
+  var image = document.getElementById("#(r_packageType)_#(r_toggleImageId)");
+
+
+
+  // If the checkbox is checked, display the output text
+  if (checkBox.checked == true){
+    console.log("pre b")
+    image.src = "#(r_blackImageURL)";
+    console.log("post b")
+
+  } else {
+    console.log("pre c")
+    image.src = "#(r_whiteImageURL)";
+    console.log("post c")
+
+  }
+}
+
+
+
+
+
+</script>

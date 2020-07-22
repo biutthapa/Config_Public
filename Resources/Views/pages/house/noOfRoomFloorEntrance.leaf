@@ -1,0 +1,115 @@
+
+
+
+#embed("common/theHead")
+
+<!-- Pagination -->
+
+
+<nav aria-label="Page navigation example ">
+  <ul class="pagination justify-content-center">
+    <li class="page-item">
+      <a class="page-link text-dark" href="/propertyAndProtectionType" tabindex="-1">Previous</a>
+    </li>
+    <li class="page-item disabled"><a class="page-link" href="#">1</a></li>
+    <li class="page-item disabled"><a class="page-link text-light bg-dark border-dark" href="#">2</a></li>
+    <li class="page-item disabled"><a class="page-link" href="#">3</a></li>
+    <li class="page-item disabled"><a class="page-link" href="#">4</a></li>
+  </ul>
+</nav>
+
+
+<!-- content -->
+<div class="d-block d-sm-none">
+  <br>
+</div>
+
+
+<div class="jumbotron">
+  <center>
+  <h3 class="display-4">House Details</h3>
+
+  <hr class="my-4">
+
+
+  <p class="lead">What are details of your house?</p>
+  <form class="" action="/house/noOfRoomFloorEntrance" method="post">
+    <div class="row">
+      <div class="col-md">
+        <label for="numberOfRooms">‍
+          <div class="d-none d-sm-block">
+            <!-- layout for large screens -->
+            <h1><span class="oi oi-crop"></span></h1>
+
+          </div>
+          <div class="row">
+            No. of Rooms
+            &nbsp;
+            <small class="btn-group" role="group">
+              <input type="number" name="numberOfRooms" min="1" oninput="validity.valid||(value='');" step="1" value="1"/>
+            </small>
+          </div>
+        </label> <br>
+      </div>
+
+      <div class="col-md">
+        <label for="numberOfFloors">‍
+          <div class="d-none d-sm-block">
+            <!-- layout for large screens -->
+            <h1><span class="oi oi-menu"></span></h1>
+
+          </div>
+          <div class="row">
+            No. of Floors
+            &nbsp;
+            <small class="btn-group" role="group">
+              <input type="number" name="numberOfFloors" min="1" oninput="validity.valid||(value='');" step="1" value="1"/>
+            </small>
+          </div>
+        </label> <br>
+      </div>
+
+      <div class="col-md">
+        <label for="numberOfEntrances">‍
+          <div class="d-none d-sm-block">
+            <!-- layout for large screens -->
+            <h1><span class="oi oi-key"></span></h1>
+
+          </div>
+          <div class="row">
+            No. of Entrances
+            &nbsp;
+            <small class="btn-group" role="group">
+              <input type="number" name="numberOfEntrances" min="1" oninput="validity.valid||(value='');" step="1" value="1"/>
+            </small>
+          </div>
+        </label> <br>
+      </div>
+
+    </div><br>
+    <div class="row">
+      <div class="col-md">
+        <label for="isOutdoorSelected">‍
+          <input name="isOutdoorSelected" class="form-check-input" type="checkbox" id="isOutdoorSelected" unchecked>
+
+
+          I want security outside the House
+
+        </label> <br>
+      </div>
+    </div>
+
+
+
+
+
+    <button class="btn btn-outline-dark btn-lg float-center" type="submit" name="button">Continue</button>
+  </form>
+  </center>
+</div>
+<br>
+
+
+
+
+#embed("common/theFooter")

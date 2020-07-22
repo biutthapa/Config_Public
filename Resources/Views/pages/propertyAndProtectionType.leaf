@@ -1,0 +1,184 @@
+
+#embed("common/theHead")
+
+<!-- Pagination -->
+
+
+<nav aria-label="Page navigation example ">
+  <ul class="pagination justify-content-center">
+    <li class="page-item">
+      <a class="page-link text-dark" href="/" tabindex="-1">Previous</a>
+    </li>
+    <li class="page-item disabled"><a class="page-link text-light bg-dark border-dark" href="#">1</a></li>
+    <li class="page-item disabled"><a class="page-link" href="#">2</a></li>
+    <li class="page-item disabled"><a class="page-link" href="#">3</a></li>
+    <li class="page-item disabled"><a class="page-link" href="#">4</a></li>
+  </ul>
+</nav>
+
+
+<!-- content -->
+<div class="d-block d-sm-none">
+  <br>
+</div>
+
+<div class="jumbotron">
+  <center>
+  <h3 class="display-4">Property and Risk Types</h3>
+
+  <hr class="my-4">
+
+
+  <p class="lead">What type of property needs protection?</p>
+  <form class="" action="/propertyAndProtectionType" method="post">
+
+    <div class="d-none d-sm-block">
+      <!-- layout for large screens -->
+      <div class="btn-group-toggle margin-desktop-property-type" data-toggle="buttons">
+
+
+      <div class="form-check btn btn-outline-dark btn-circle btn-lg float-left house-icon active">
+        <input class="form-check-input" type="radio" name="propertyType" value="house">
+        <label class="form-check-label" for="house">
+          <span class="oi oi-home" title="icon name" aria-hidden="true"></span>
+        </label>
+      </div>
+
+
+
+
+      <div class="form-check btn btn-outline-dark btn-circle btn-lg float-center apartment-icon">
+        <input class="form-check-input" type="radio" name="propertyType" value="apartment" checked>
+        <label class="form-check-label" for="apartment">
+          <span class="oi oi-spreadsheet" title="icon name" aria-hidden="true"></span>
+        </label>
+      </div>
+
+      <div class="form-check btn btn-outline-dark btn-circle btn-lg float-right mr-xl-5 office-icon">
+        <input class="form-check-input" type="radio" name="propertyType" value="office">
+        <label class="form-check-label" for="office">
+          <span class="oi oi-print" title="icon name" aria-hidden="true"></span>
+        </label>
+      </div>
+    </div>
+    </div>
+
+    <div class="d-block d-sm-none">
+      <!-- layout for xs screens -->
+
+        <!-- layout for large screens -->
+        <div class="btn-group-toggle margin-mobile-property-type" data-toggle="buttons">
+
+
+        <div class="form-check btn btn-outline-dark btn-lg btn-block house-icon active">
+          <input class="form-check-input" type="radio" name="propertyType" value="house">
+          <label class="form-check-label" for="house">
+            <span class="oi oi-home" title="icon name" aria-hidden="true"> A House</span>
+          </label>
+        </div>
+
+
+
+
+        <div class="form-check btn btn-outline-dark btn-lg btn-block apartment-icon" >
+          <input class="form-check-input" type="radio" name="propertyType" value="apartment" checked>
+          <label class="form-check-label" for="apartment">
+            <span class="oi oi-spreadsheet" title="icon name" aria-hidden="true"> An Apartment</span>
+          </label>
+        </div>
+
+        <div class="form-check btn btn-outline-dark btn-lg btn-block office-icon">
+          <input class="form-check-input" type="radio" name="propertyType" value="office">
+          <label class="form-check-label" for="office">
+            <span class="oi oi-print" title="icon name" aria-hidden="true"> An Office</span>
+          </label>
+        </div>
+      </div>
+
+
+    </div>
+
+    <div class="d-none d-sm-block">
+      <!-- layout for large screens -->
+      <div class="row">
+        <div class="col">
+          <div class="collapse multi-collapse house-collapse">
+            <br>
+
+            <div class="card card-body border-0">
+              <u>A House</u>
+              <small>The distance range of Ajax systems is 2000 m, which means even a large house can be protected, along with other buildings on the plot. And all this with no wiring at all. Don't worry if you have a cat or dog — the detectors will ignore pets.</small>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="collapse multi-collapse apartment-collapse">
+            <br>
+
+            <div class="card card-body border-0">
+              <u>An Apartment</u>
+              <small>Ajax systems are easy to install by yourself, and there is no need for repairs after installation. Don't worry if you have a cat or dog — the detectors will ignore pets. </small>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="collapse multi-collapse office-collapse">
+            <br>
+
+            <div class="card card-body border-0">
+              <u>An Office</u>
+              <small>Up to 99 employees can operate the system. The radio communication range will be sufficient even if the office is located on several storeys. In case you decide to move to another office, it is easy to dismantle and reinstall the security system in the new location. </small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="d-block d-sm-none">
+      <!-- layout for xs screens -->
+    </div>
+
+
+
+
+
+    <br><br>
+    <p class="lead">What risks are you concerned about?</p>
+
+        <div class="btn btn-dark btn-mid">
+        <div class="custom-control custom-checkbox">
+          <input type="checkbox" class="custom-control-input" name="riskType[]" value="theft" id="theftCheck" checked>
+            <label class="custom-control-label" for="theftCheck" data-toggle="collapse" href="#theftInfo" role="button" aria-expanded="false" aria-controls="theftInfo">‍
+              <span class="oi oi-person" title="icon name" aria-hidden="true"> Theft</span>
+            </label>
+        </div>
+      </div>
+
+        <div class="btn btn-dark btn-mid">
+        <div class="custom-control custom-checkbox">
+          <input type="checkbox" class="custom-control-input" name="riskType[]" value="fire" id="fireCheck">
+          <label class="custom-control-label" for="fireCheck" data-toggle="collapse" href="#fireInfo" role="button" aria-expanded="false" aria-controls="fireInfo">
+            <span class="oi oi-fire" title="icon name" aria-hidden="true"> Fire</span>
+          </label>
+        </div>
+      </div>
+
+        <div class="btn btn-dark btn-mid">
+        <div class="custom-control custom-checkbox">
+          <input type="checkbox" class="custom-control-input" name="riskType[]" value="flood" id="floodCheck">
+          <label class="custom-control-label" for="floodCheck" data-toggle="collapse" href="#floodInfo" role="button" aria-expanded="false" aria-controls="floodInfo">
+            <span class="oi oi-droplet" title="icon name" aria-hidden="true"> Flood</span>
+          </label>
+        </div>
+      </div>
+
+      <br><br>
+
+    <button class="btn btn-outline-dark btn-lg float-center" type="submit" name="button">Continue</button>
+  </form>
+  </center>
+</div>
+
+
+
+
+#embed("common/theFooter")

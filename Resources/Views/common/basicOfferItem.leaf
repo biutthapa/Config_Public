@@ -1,0 +1,88 @@
+<div class="row">
+  <div class="col-sm-3 float-center">
+    <img id="#(b_packageType)_#(b_toggleImageId)" class="img-fluid" style="padding: 0px;" src="#(b_whiteImageURL)">
+  </div>
+  <div class="col-sm-6">
+    <h5>#(b_itemTitle)</h5>
+    <small class="col text-muted float-right">#(b_itemDescription)</small>
+  </div>
+
+  <div class="col-sm-3 justify-content-center align-self-center">
+    <small>Quantity</small>
+    <br>
+    <small class="row btn-group" role="group">
+      <input type="number" id="#(b_quantityInputName)_#(b_packageType)" name="#(b_quantityInputName)" min="1" oninput="validity.valid||(value='');" step="1" value="#(b_itemQuantity)"/>
+    </small>
+    <div class="row justify-content-center align-self-center" id="#(b_priceId)_#(b_packageType)">
+      <p>#(b_price * b_itemQuantity)</p>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+<script>
+
+
+// document.getElementById("#(b_packageType)_#(b_toggleImageId)").onload = function() { colorCheck_#(b_packageType)_#(b_itemId)() };
+
+
+
+
+function updateObject_#(b_priceId)_#(b_packageType)() {
+  var quantity = $("##(b_quantityInputName)_#(b_packageType)").val()
+  object_#(b_priceId)_#(b_packageType).price = quantity * #(b_price)
+  updateTotal_basic()
+}
+
+
+
+$("##(b_quantityInputName)_#(b_packageType)").ready(function() {
+  let price = #(b_itemQuantity) * #(b_price)
+  $("##(b_priceId)_#(b_packageType)").text('€' + price.toFixed(2));
+  updateObject_#(b_priceId)_#(b_packageType)()
+});
+
+$("##(b_quantityInputName)_#(b_packageType)").change(priceUpdate_#(b_priceId)_#(b_packageType))
+
+$("##(b_quantityInputName)_#(b_packageType)").parent().on("click", "#priceChangeBtn", function(){
+  var quantity = $("##(b_quantityInputName)_#(b_packageType)").val()
+  let price = quantity * #(b_price)
+  $("##(b_priceId)_#(b_packageType)").text('€' + price.toFixed(2));
+  updateObject_#(b_priceId)_#(b_packageType)()
+  });
+
+function priceUpdate_#(b_priceId)_#(b_packageType)() {
+  var quantity = $(this).val()
+  let price = quantity * #(b_price)
+  $("##(b_priceId)_#(b_packageType)").text('€' + price.toFixed(2));
+  updateObject_#(b_priceId)_#(b_packageType)()
+}
+
+
+function colorCheck_#(b_packageType)_#(b_itemId)() {
+  // Get the checkbox
+  var checkBox = document.getElementById("basicColorToggle");
+  // Get the output text
+  var image = document.getElementById("#(b_packageType)_#(b_toggleImageId)");
+
+
+
+  // If the checkbox is checked, display the output text
+  if (checkBox.checked == true){
+    image.src = "#(b_blackImageURL)";
+  } else {
+    image.src = "#(b_whiteImageURL)";
+
+  }
+}
+
+
+
+
+
+</script>

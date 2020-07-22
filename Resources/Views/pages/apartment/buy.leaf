@@ -1,0 +1,125 @@
+
+#embed("common/theHead")
+<!-- Pagination -->
+
+<nav aria-label="Page navigation example ">
+  <ul class="pagination justify-content-center">
+    <li class="page-item">
+      <a class="page-link text-dark" href="/apartment/offer/" tabindex="-1">Previous</a>
+    </li>
+    <li class="page-item disabled"><a class="page-link" href="#">1</a></li>
+    <li class="page-item disabled"><a class="page-link" href="#">2</a></li>
+    <li class="page-item disabled"><a class="page-link" href="#">3</a></li>
+    <li class="page-item disabled"><a class="page-link text-light bg-dark border-dark" href="#">4</a></li>
+  </ul>
+</nav>
+
+
+<!-- content -->
+<div class="d-block d-sm-none">
+  <br>
+</div>
+
+
+<div class="jumbotron">
+  <center>
+  <h3 class="display-4">Buy</h3>
+  <hr class="my-4">
+  <p class="lead">Let's finalize your order</p>
+      <div class="row">
+      <div class="col-sm-2"></div>
+      <div class="col-sm-8">
+        <div class="card">
+          <div class="card-body">
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">
+                Selected Color: #(colorSelected)
+                <br>
+                Total from previous page: €#(totalFromPreviousPage)
+                <br>
+              </li>
+              <form class="" action="/pay" method="post">
+
+                <li class="list-group-item">
+                  <label for="isCameraSelected">‍
+                    <input name="isCameraSelected" class="form-check-input" type="checkbox" id="isCameraSelected" unchecked>
+                      Add Security Camera (€80)
+                  </label>
+                  <br>
+                  <label for="isInstallationSelected">‍
+                    <input name="isInstallationSelected" class="form-check-input" type="checkbox" id="isInstallationSelected" unchecked>
+                      Add Installation Service (€100)
+                  </label>
+                  <br>
+                </li>
+                <li class="list-group-item">
+                  <div class="form-group row">
+                    <label for="email" class="col-sm-2 col-form-label">Email</label>
+                    <div class="col-sm-10">
+                      <input type="email" name="email" class="form-control" id="email" placeholder="you@yourmail.com" required>
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <label for="phone" class="col-sm-2 col-form-label">Phone</label>
+                    <div class="col-sm-10">
+                      <input type="text" name="phone" class="form-control" id="phone" placeholder="Your Phone Number" required>
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <label for="firstName" class="col-sm-2 col-form-label">Name</label>
+                    <div class="col-sm-5">
+                      <input type="text" name="firstName" class="form-control" id="firstName" placeholder="First" required>
+                    </div>
+                    <div class="col-sm-5">
+                      <input type="text" name="lastName" class="form-control" id="lastName" placeholder="Last" required>
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <label for="addressLine1" class="col-sm-2 col-form-label">Address</label>
+                    <div class="col-sm-10">
+                      <input type="text" name="addressLine1" class="form-control" id="addressLine1" placeholder="Address Line 1" required>
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <label for="addressLine2" class="col-sm-2 col-form-label"></label>
+                    <div class="col-sm-10 float-right">
+                      <input type="text" name="addressLine2" class="form-control" id="addressLine2" placeholder="Address Line 2">
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <label for="postalCode" class="col-sm-2 col-form-label">Postal</label>
+                    <div class="col-sm-4">
+                      <input type="text" name="postalCode" class="form-control" id="postalCode" placeholder="Your Postal Code" required>
+                    </div>
+                    <label for="city" class="col-sm-2 col-form-label">City</label>
+                    <div class="col-sm-4">
+                      <input type="text" name="city" class="form-control" id="city" placeholder="Name of Your City" required>
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <label for="phone" class="col-sm-2 col-form-label">Country</label>
+                    <div class="col-sm-10">
+                      <input type="text" name="country" class="form-control" id="country" placeholder="Name of Your Country" required>
+                    </div>
+                  </div>
+
+
+
+                </li><br>
+                <button class="btn btn-outline-dark btn-lg float-center" type="submit" name="button">Pay</button>
+            </form>
+
+            </div>
+            </ul><br>
+        </div>
+      </div>
+      <div class="col-sm-2"></div>
+    </div>
+  </center>
+</div>
+<br>
+
+
+
+
+#embed("common/theFooter")

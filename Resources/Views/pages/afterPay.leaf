@@ -1,0 +1,15 @@
+#embed("common/theHead")
+
+
+
+
+<!-- content -->
+
+<div class="jumbotron">
+  <h1 class="display-4">Thank you</h1>
+  <p class="lead">done.</p>
+  <hr class="my-4">
+  <p>paid.</p>
+</div>
+
+#embed("common/theFooter")

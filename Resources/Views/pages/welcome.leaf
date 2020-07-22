@@ -1,0 +1,31 @@
+#embed("common/theHead")
+
+<!-- Pagination -->
+
+
+<nav aria-label="Page navigation example ">
+  <ul class="pagination justify-content-center">
+    <li class="page-item disabled">
+      <a class="page-link " href="#" tabindex="-1">Previous</a>
+    </li>
+    <li class="page-item disabled"><a class="page-link" href="#">1</a></li>
+    <li class="page-item disabled"><a class="page-link" href="#">2</a></li>
+    <li class="page-item disabled"><a class="page-link" href="#">3</a></li>
+    <li class="page-item disabled"><a class="page-link" href="#">4</a></li>
+
+
+  </ul>
+</nav>
+
+
+<!-- content -->
+
+<div class="jumbotron">
+  <h1 class="display-4">Hi, Welcome to Configurator! (Beta)</h1>
+  <p class="lead">This is a place to find out what we calculate what you need based on your needs.</p>
+  <hr class="my-4">
+  <p>It uses simple data you enter to recommend the best we have to offer.</p>
+  <a class="btn btn-dark btn-lg" href="/propertyAndProtectionType" role="button">Proceed</a>
+</div>
+
+#embed("common/theFooter")

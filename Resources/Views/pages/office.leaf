@@ -1,0 +1,30 @@
+#embed("common/theHead")
+
+<!-- Pagination -->
+
+
+<nav aria-label="Page navigation example ">
+  <ul class="pagination justify-content-center">
+    <li class="page-item">
+      <a class="page-link text-dark" href="/propertyAndProtectionType" tabindex="-1">Previous</a>
+    </li>
+    <li class="page-item disabled"><a class="page-link" href="#">1</a></li>
+    <li class="page-item disabled"><a class="page-link text-light bg-dark border-dark" href="#">2</a></li>
+    <li class="page-item disabled"><a class="page-link" href="#">3</a></li>
+
+  </ul>
+</nav>
+
+
+<!-- content -->
+<br><br>
+
+<div class="jumbotron border">
+  <h3>Hi, We are super excited to do business with you.</h3>
+  <p class="lead">For business customers, we personally assess you needs.</p>
+  <hr class="my-4">
+  <p>Please <a href="https://beveilig-direct.nl/pages/contact">Click Here</a> to fill the contact form and get started.</p>
+</div>
+<br>
+
+#embed("common/theFooter")
